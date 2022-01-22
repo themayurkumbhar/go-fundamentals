@@ -23,4 +23,7 @@ func main() {
 	fmt.Println("title is set: ", title)
 	fmt.Println("length is: ", len(title))               // this is pass by value to len funtion
 	fmt.Println("Memory address of title var: ", &title) // & sign is used to get memory address
+
+	var ptr *string = &title
+	fmt.Print("ptr var pointing to: ", ptr, "memory. which contains value as: ", *ptr)
 }
