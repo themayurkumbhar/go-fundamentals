@@ -17,4 +17,6 @@ func main() {
 	// chek the type of vars using reflection
 	fmt.Println("name is type of: ", reflect.TypeOf(name))
 	fmt.Println("module is type of: ", reflect.TypeOf(module))
+	var description string
+	fmt.Println("Description is: ", description)
 }
