@@ -21,5 +21,6 @@ func main() {
 	fmt.Println("Description is: ", description)
 	title := "Variable Declarations" // with initializing the value to variable
 	fmt.Println("title is set: ", title)
-	fmt.Println("length is: ", len(title)) // this is pass by value to len funtion
+	fmt.Println("length is: ", len(title))               // this is pass by value to len funtion
+	fmt.Println("Memory address of title var: ", &title) // & sign is used to get memory address
 }
