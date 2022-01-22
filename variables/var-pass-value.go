@@ -9,7 +9,7 @@ func main() {
 	course := "go-fundamentals"
 
 	fmt.Println("Hi,", name, "welcome to", course)
-	updateCourse(course)
+	updateCourse(course) // passing the direct value to function here
 	fmt.Println("You are currently doing: ", course, "Cource.")
 }
 
