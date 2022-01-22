@@ -67,8 +67,37 @@ Go provide different ways to bundle, run application. Depends upon the requireme
     * keep short
     * can use `camelCase`
 > Keep first character of variable `lowercase`, else making `capitalletter` will make that variable visible outside the package it defined.
-
-
+  * Example: 
+```
+var (
+  name    string
+  course  string
+  module, clip = 2, 1
+)
+```
+  * Scope of above declared vars is global in package.
+  * Variable declaration inside the function
+    * `var description string` this is if you dont have any default assignment to set variable
+    * `description := "this is go fundamental course"` you can set the value directly to initialize.
+    * operator ` := ` is short assignment operator used to assign the value to vars.
+> You can declare varibale at `package` level and not use is allowed. but if you declare variable inside the `function` you have to use the variable.
+  * Values and Pointers
+    * Go passes arguments `by values` and `not by references`
+    * When you pass the var directly to any function its pass by value ` len(title) ` 
+      * To get memory address, you have to use `&` sign like ` fmt.Println(&title) ` will give something like `0xc000088250` 
+    * Go provides `pointers` to point to other variables
+      * Pointer variable e.g. `var ptr *string = &title` here `*` make the variable `ptr` a pointer var pointing to memory address of `title` var
+      * `*ptr` will yeid value is hold by the variable pointed to which `var ptr` is pointing.
+    * Pass by **Reference**
+      * To pass the value as reference to function you need to use the `&variable` and in function you need to use the pointer variabel to reference the var like `variable *type`
+      * then you can use `*variable = {new valuue}` to update the variable passed by reference which will actually update the value in original variable.
+    * Constants in go
+      * Contants can be created using keyword `const` in go
+      * for example `const speedOfLight = 186000` 
+      * Once create you can not change the value of constant.
+    * Enviorment Variables
+      * You can access the enviorment vars using package `os` in go
+      * which will allow you to read env vars.
 
 
 ## Pull Requests
