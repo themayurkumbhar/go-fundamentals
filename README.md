@@ -14,33 +14,27 @@ This repository contains the go-funtamentals to understand the basic contructs o
 
 ----------
 
+
 ## Go Modules, Packages and Source-files Basics :spiral_notepad:
 
 Installing go lang is very easy, just go to [go install](https://go.dev/doc/install) page and follow instructions.
 
-* package structure:
-  
+* package structure:  
+
   ```
   module
   |--- package
       |--- source-files
   ```
-  
-  * Create directory to start using as `go module` which will contain all the srouce code related to that module.
-  
-  * e.g. `mkdir go-fundamentals` this is my go module for developement.
-  
-  * To init the above directory to be work as go module you will need to initialize with module initialization command.
-  
-  * Use command `go mod init {optional/package/name}` this will create [go.mod](go.mod) file with module name and go versoin used to create the module.
-  
-  * Create new directory to start using as `go package` which will logically group your source code files.
-  
-  * e.g. `mkdir hello-world` this is my go package which will have code related to hello-world.
-  
-  * Inside the `hello-world` folder you can have source files as part of hello-world package.
-  
-  * e.g. you can refer to [hello-world/hello.go](hello-world/hello.go) file is source code file containing the source code related to hello-world package.
+* Create directory to start using as `go module` which will contain all the srouce code related to that module.
+* e.g. `mkdir go-fundamentals` this is my go module for developement.
+* To init the above directory to be work as go module you will need to initialize with module initialization command.
+* Use command `go mod init {optional/package/name}` this will create [go.mod](go.mod) file with module name and go versoin used to create the module.
+
+* Create new directory to start using as `go package` which will logically group your source code files.
+* e.g. `mkdir hello-world` this is my go package which will have code related to hello-world.
+* Inside the `hello-world` folder you can have source files as part of hello-world package.  
+* e.g. you can refer to [hello-world/hello.go](hello-world/hello.go) file is source code file containing the source code related to hello-world package.
 
 ## Build, Run, Install Basics :wrench:
 
@@ -71,8 +65,7 @@ Go provide different ways to bundle, run application. Depends upon the requireme
     * use meaningful names
     * keep short
     * can use `camelCase`
-      
-      > Keep first character of variable `lowercase`, else making `capitalletter` will make that variable visible outside the package it defined.
+> Keep first character of variable `lowercase`, else making `capitalletter` will make that variable visible outside the package it defined.
   * Example: 
     
     ```
@@ -87,8 +80,9 @@ Go provide different ways to bundle, run application. Depends upon the requireme
     * `var description string` this is if you dont have any default assignment to set variable
     * `description := "this is go fundamental course"` you can set the value directly to initialize.
     * operator ` := ` is short assignment operator used to assign the value to vars.
-      
-      > You can declare varibale at `package` level and not use is allowed. but if you declare variable inside the `function` you have to use the variable.
+
+> You can declare varibale at `package` level and not use is allowed. but if you declare variable inside the `function` you have to use the variable.
+
   * Values and Pointers
     * Go passes arguments `by values` and `not by references`
     * When you pass the var directly to any function its pass by value ` len(title) ` 
