@@ -7,9 +7,8 @@ import (
 
 //declare var outside any func, string will initialize to empty, int will be 0
 var (
-	name         string
-	course       string
-	module, clip int // another way to group and initialize the vars
+	name, course = "Mayur Kumbhar", "Go-Fundamentals"
+	module, clip = 2, 1 // another way to group and initialize the vars
 )
 
 func main() {
