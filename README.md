@@ -198,6 +198,46 @@ Go provide different ways to bundle, run application. Depends upon the requireme
   * You can refer to [if-with-errors.go](conditionals/if-with-errors.go) for running example
 
 
+### 5. Loops in Go (Basics)
+
+* GO has only one loop keyword `for` which has many way to configure and use as required.
+* Syntax for loop
+  ```go
+  for <expression> {
+    <code>
+  }
+  ```
+  * here if `expression` is `true` that means it will loop until the expression evaluates to `true`
+* Infinite `for` loop
+  ```go
+  for {
+    <code>
+  }
+  ```
+  * here if we dont specify any expression in for it will loop infinite times
+* For loop with `boolean expression`
+  * you can use `for {expression_evaluates_to|true|false}` to continue/break loop
+  * example can be found at [for-loop.go](loops/for-loop.go)
+  * You can also write the traditional for loop.
+  ```go
+  for i:=0; i<10; i++{
+    <code>
+  }
+  ```
+  * Example to run [for-loop.go](loops/for-loop.go)
+* For Loop with `range expression`
+  * You can iterate over the range of items using for loop
+  ```go
+  for index, item := range rangeVariable {
+    <code>
+  }
+  ```
+  * Execute the code for range loop [range-for-loop.go](loops/range-for-loop.go)
+* Break and Continue statements in loop
+  * `break` is used in loop to stop the execution of at given statement.
+  * `continue` is used in loop to go back and continue to execute the loop statement.
+  * Example for brak and continue [for-break-continue.go](loops/for-break-continue.go)
+
 ----------
 
 ## Pull Requests :twisted_rightwards_arrows:
