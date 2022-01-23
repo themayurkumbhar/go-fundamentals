@@ -14,4 +14,12 @@ func main() {
 		fmt.Println("Total watch content must not be greater than total content")
 	}
 
+	// in statement declartion of vars which only available if-else scope
+
+	if userAge, requiredAge := 15, 18; userAge > requiredAge {
+		fmt.Println("User is allowed")
+	} else {
+		fmt.Println("User is not allowed:", userAge)
+	}
+
 }
