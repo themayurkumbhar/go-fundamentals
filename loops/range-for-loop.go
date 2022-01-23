@@ -11,4 +11,13 @@ func main() {
 	for index, course := range courses {
 		fmt.Println("value at", index, "is", course)
 	}
+
+	titles := []string{"title1", "title2", "title3", "title4"}
+
+	//nested for loops
+	for _, course := range courses {
+		for _, title := range titles {
+			fmt.Println("Course", course, "has title:", title)
+		}
+	}
 }
