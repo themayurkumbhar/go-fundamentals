@@ -10,6 +10,9 @@ func main() {
 		fmt.Println("welcome to go-services")
 	case "go-fundamentals":
 		fmt.Println("welcome to go-fundamentals")
+		fallthrough
+	case "go-falls":
+		fmt.Println("go with fallthrough")
 	default:
 		fmt.Println("Welcome!")
 	}
