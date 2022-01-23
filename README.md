@@ -101,7 +101,7 @@ Go provide different ways to bundle, run application. Depends upon the requireme
       * which will allow you to read env vars.
 
 
-### 3. Functions in Go
+### 3. Functions in Go (basics)
 
 * why do you functions? **code reusability!**
   * `input` -> `Function` -> `output`
@@ -130,9 +130,76 @@ Go provide different ways to bundle, run application. Depends upon the requireme
   * Important part is `paramName ...type` is says it accepts the varying number of parameters. you can refer [varying-params-fuction.go](functions/varying-params-function.go)
 
 
+### 4. Conditionals in Go (basics)
+
+* the `if` syntax evaluates the condition and executes code based on it.
+  * conditional if else in go
+  
+  ```go
+  if userAge > 18 {
+    <code>
+  }
+  ```
+  * conditional `else` with if
+  
+  ```go
+  if userAge > 18 {
+    <code>
+  } else {
+    <code>
+  }
+  ```
+  * if else with nesting of `if-else` conditions
+  
+  ```go
+  if userAge > 18 {
+    <code>
+  } else if userAge > 15 {
+    <code>
+  } else {
+    <code>
+  }
+  ```
+  * you can also declare the vars in if scope which only avaulable to scope of if else
+  ```go
+  if userAge, requiredAge := 15, 18; userAge > requiredAge {
+    <code>
+  } else {
+    <code>
+  }
+  ```
+  * You can refere to [if-example.go](conditionals/if-example.go) to running source code.
+* Switch-case statements in go
+  * Syntax of `switch` statement.
+  ```go
+  switch <simple-statment>; <expression> {
+  case <value>: <code>
+  case <value>: <code>
+  default: <code>
+  }
+  ```
+  * Go will not execute any statment after matching the case, so `only matched` case will be executed and if not match it will execute the `default` one.
+  * Go will have default `break` for each case statement.
+    * to override behaviour go provides `fallthrough` keyword.
+    * which only applies to case statement its added, which will execute next case statememt only.
+  * You can refer to runnning example of [switch-example.go](conditionals/switch-example.go).
+  * Multiple conditional match in same `case` statement
+    * go provides the way to match the multiple conditionals in same case so you can group behaviour and reduce multiple case statements.
+    * example: [switch-multi-case.go](conditionals/switch-multi-case.go)
+* If with Error handling
+  * if is most common way to handle `error` in go
+  * `error` is defined type is go lang.
+  ```go
+  _, err := os.Open("filename")
+  if err != nil {
+    <code_to_handle_error>
+  }
+  ```
+  * You can refer to [if-with-errors.go](conditionals/if-with-errors.go) for running example
+
 
 ----------
 
-## Pull Requests :grou:
+## Pull Requests :twisted_rightwards_arrows:
 
 I only accept PR's to fix mistakes. Thanks in advance.
