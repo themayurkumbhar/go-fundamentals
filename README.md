@@ -21,7 +21,7 @@ Installing go lang is very easy, just go to [go install](https://go.dev/doc/inst
 
 * package structure:  
 
-  ```
+  ```go
   module
   |--- package
       |--- source-files
@@ -67,8 +67,7 @@ Go provide different ways to bundle, run application. Depends upon the requireme
     * can use `camelCase`
 > Keep first character of variable `lowercase`, else making `capitalletter` will make that variable visible outside the package it defined.
   * Example: 
-    
-    ```
+    ```go
     var (
     name    string
     course  string
@@ -100,6 +99,37 @@ Go provide different ways to bundle, run application. Depends upon the requireme
     * Enviorment Variables
       * You can access the enviorment vars using package `os` in go
       * which will allow you to read env vars.
+
+
+### 3. Functions in Go
+
+* why do you functions? **code reusability!**
+  * `input` -> `Function` -> `output`
+  * Syntax of functions in Go
+  ```go
+  func functionName(params, type) returnType {
+    <code>
+  }
+  ```
+  * above code snippet says, `func` is keyword to declare function followed by `name` of fuction. which takes `parameters` with its `type` then followed by the `return type` of function.
+  * Example:
+  ```go
+    func updateCourse(course string) course string {
+      course = "new course"
+      return course
+    }
+  ```
+  * You can refer to [convert.go](functions/converter.go) full running source file.
+* Funtion with **Varying** number of parameters
+  * To create functoin which accepts varying params
+    ```go
+    func varyingfuncName(param ...type) returnType {
+      <code>
+    }
+    ```
+  * Important part is `paramName ...type` is says it accepts the varying number of parameters. you can refer [varying-params-fuction.go](functions/varying-params-function.go)
+
+
 
 ----------
 
