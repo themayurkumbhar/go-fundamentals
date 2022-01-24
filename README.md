@@ -242,4 +242,4 @@ Go provide different ways to bundle, run application. Depends upon the requireme
 
 ## Pull Requests :twisted_rightwards_arrows:
 
-I only accept PR's to fix mistakes. Thanks in advance.
+Feel Free to update the documentation and add more relavent contents. Thanks in advance. 🤟
