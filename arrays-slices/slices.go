@@ -16,4 +16,15 @@ func main() {
 	fmt.Println("Number of titles are:", len(titles), "Capacity can be:", cap(titles))
 	fmt.Println(titles)
 
+	authors := []string{
+		"Author1",
+		"Author4",
+		"Author2",
+		"Author3"}
+
+	fmt.Println("Authors slice size is:", len(authors), "Capacity is:", cap(authors))
+
+	for _, author := range authors {
+		fmt.Println(author)
+	}
 }
