@@ -238,6 +238,36 @@ Go provide different ways to bundle, run application. Depends upon the requireme
   * `continue` is used in loop to go back and continue to execute the loop statement.
   * Example for brak and continue [for-break-continue.go](loops/for-break-continue.go)
 
+### 6. Arrays and Sclices
+
+* for `lists` in go, all the data types stored in list must be of `same type`
+* For `list of string` all the data should be `string` type, similarly for `numbers` it should br `int` type data
+* **Arrays** : are like `lists`
+  * they have `fix size`
+* **Slices** : are like `arrays`
+  * but they are `resizable` 
+  * they are built top of the `array`
+    * So basically no actual data is stored inside the slice, it is actually the `pointers` pointing to data stored inside the array
+    * as they are pointers, dont store the data, its cheaper.
+    * Initialization of empty slice
+  ```go
+  varName := make([]<type>, <length>, <capacity>)
+  ```
+    * You can have slice of slices which creates futher smaller pointers of slice
+    ```go
+    someSlice := []int{1, 2, 3, 4, 5, 6, 7}
+    smallSlice := someSlice[2:7]
+    ```
+    * here we have to specify the `[start_index:end_index]` to create the slice, where `end_index` is `excluded` from the result
+    * You can refer the more executable [arrays-slices](arrays-slices)
+> this is very much similar concept of pythons list slicing. you can read more [here!](https://www.pythontutorial.net/advanced-python/python-slicing/)
+  
+  * How Slices are Dyamic (resizable)?
+    * When the size of `slice` is completly filled, as it uses underlying data storage `array`, it will double the size of `array` and store the next element pointing to next position
+    * You with `slice` you dont worry about the lenght of array that you need, you can use as resizable array data structure however in case of `array` you have to specify and create the size and have manually upgrade lenght do manipulations
+    * Resizable better understanding execute [resizable.go](arrays-slices/resizable.go).
+    
+
 ----------
 
 ## Pull Requests :twisted_rightwards_arrows:
