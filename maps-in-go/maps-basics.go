@@ -13,4 +13,11 @@ func main() {
 
 	fmt.Println("Courses map:", courses)
 
+	authors := map[string]int{
+		"Author_One": 1,
+		"Author_Two": 2, //this is bcoz go will add ; at end
+	}
+
+	fmt.Println("authors are:", authors)
+
 }
