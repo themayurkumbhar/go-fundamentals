@@ -267,6 +267,40 @@ Go provide different ways to bundle, run application. Depends upon the requireme
     * You with `slice` you dont worry about the lenght of array that you need, you can use as resizable array data structure however in case of `array` you have to specify and create the size and have manually upgrade lenght do manipulations
     * Resizable better understanding execute [resizable.go](arrays-slices/resizable.go).
     
+### 7. Maps in Go (basics)
+  * `Map` is `key-value` type of data structure same as maps, hashTable in other languages. 
+  * It stores data in `key -> value` format.
+  * initialization of map
+    * syntax
+  ```go
+  map[<key-type>]<value-type>
+  ```
+    * `<key-type>` must be **comaprable** data type, like it should work with `== and !=`
+    * `key entry` must be **unique**.
+  ```go
+  someMapVar := make(map[string]int)
+  ```
+    * Here we have create empty map which will hold `string` keys and `int` values.
+    * Execute [maps-basics.go](maps-in-go/maps-basics.go) for more examples.
+    * Go maps Object will default return the data with `key ordered` way. like data is sorted based on `keys`
+    * Retriving data from map using `for` loop will return data **randomly**.
+    * Execute code [map-iteration.go](maps-in-go/map-iteration.go) to understand this.
+  * add, update, delete and access value from the map
+    * Adding new entry to map
+      * Syntax `mapVar[<newKey>] = <newValue>`
+    * Update entry in map
+      * Syntax `mapVar[<existingKey>] = <newValue>`, if the key dose not exisits in `map` it will create new entry, else it will update the value.
+    * Delete the entry in map
+      * Syntax `delete(mapVar, <KeyToDelete>)` 
+    * Access any value in map
+      * Syntax `fmt.Println(mapVar[<mapKey>])`
+  * Execute the [map-iteration.go](maps-in-go/map-iteration.go) to understand wokring
+  * Map are `reference types` they will be passed by reference to `function`, so modifies actual data
+    * so its cheap to work with as its only pointers are passed
+  * they are not `thread safe`
+
+
+
 
 ----------
 
