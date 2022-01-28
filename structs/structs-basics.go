@@ -24,4 +24,12 @@ func main() {
 
 	fmt.Println(myCourseTitle)
 
+	// access data with references
+	fmt.Println(myCourseTitle.name)
+	fmt.Println(myCourseTitle.lenght)
+	fmt.Println(myCourseTitle.course)
+
+	// update structs fileds
+	myCourseTitle.lenght = 123
+	fmt.Println(myCourseTitle.lenght)
 }
