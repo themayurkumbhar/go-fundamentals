@@ -299,7 +299,25 @@ Go provide different ways to bundle, run application. Depends upon the requireme
     * so its cheap to work with as its only pointers are passed
   * they are not `thread safe`
 
-
+### 8. Structs in Go (Basics)
+  * `struct` is way of defining the custom data types in go.
+  * For a basic `person` we can create struct like
+  ```go
+  type person struct {
+    name string
+    age int
+    address string
+  }
+  ```
+  * Object Oriented in GO
+    * GO does not have `object` type 
+    * Also it dose not have `class` keyword
+    * No `inhearitance` support
+  * Execute code [structs-basics.go](structs/structs-basics.go) to understand more.
+  * You can access the `struct` fields using `.` with `var`
+    * `person.name` or `person.age`
+  * To update the structs fileds data
+    * you can use `person.age = <new_age>` 
 
 
 ----------
