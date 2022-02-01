@@ -319,6 +319,41 @@ Go provide different ways to bundle, run application. Depends upon the requireme
   * To update the structs fileds data
     * you can use `person.age = <new_age>` 
 
+### 9. Concurrency in go (basics)
+  * `concurrency` is multiple process executing *independently*
+    * Lots of tasks *executing*, but only one *active*
+> **Concurrency** is *dealing* with multiple things at once, **Parallelism** is *doing* lots of things at once
+  * "Go does not use `threads` for concurrency :confused:	?
+  * Go concurrency model
+    * So go abstracts the threading model using the `goroutine` 
+      * they are scheduled by the `go-rutime` not the `os`
+      * `go-routines` way lighter than the `os` threads
+      * Can grow and shrink as needed
+      * GO manages all the `go-routines`
+      * Dev dose not need to learn the os specific threads.
+      * Fewer conetext switches
+      * Faster startup time
+    * Go uses design model called `Actor`  [Read More](https://www.oreilly.com/library/view/applied-akka-patterns/9781491934876/ch01.html)
+    * Creating first `go-routine`
+    ```go
+    go func() {
+      //come go-routine code
+    }()
+    ```
+    * Here `go` keyword infornt of function will make this code block as `go-routine`
+    * Go routine uses `channel` to share the data
+      * two type of channels are present `buffered` & `unbuffered`
+      * `unbuffered` channel is `synchronous` behaviour channel
+        * creating channel is go
+        ```go
+        myChannel := make(chan int)
+        ```
+      * `buffered` channel is `asynchronous` behaviour channel
+      ```go
+        myChannel := make(chan int, 5) // this specifies that it can hold 5 ints in buffer
+      ```
+    * Execute your code related to go-routines [concurrency-go.go](concurrecy/concurrency-go.go)
+
 
 ----------
 
